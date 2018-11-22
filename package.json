@@ -1,0 +1,51 @@
+{
+  "name": "todoist",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "run-ios": "react-native run-ios",
+    "run-android": "react-native run-android",
+    "precommit": "pretty-quick --staged",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@rematch/core": "^1.0.6",
+    "axios": "^0.18.0",
+    "hoist-non-react-statics": "^3.1.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "prop-types": "^15.6.2",
+    "react": "16.6.1",
+    "react-native": "0.57.5",
+    "react-native-gesture-handler": "^1.0.9",
+    "react-native-scrollable-tab-view": "^0.10.0",
+    "react-native-vector-icons": "^6.1.0",
+    "react-native-webp-support": "TGPSKI/react-native-webp-support",
+    "react-navigation": "^3.0.0",
+    "react-redux": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.1.6",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "23.6.0",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-react-app": "^3.0.5",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.2.0",
+    "jest": "23.6.0",
+    "lint-staged": "^8.1.0",
+    "metro-react-native-babel-preset": "0.49.2",
+    "prettier": "^1.15.2",
+    "pretty-quick": "^1.8.0",
+    "react-test-renderer": "16.6.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
