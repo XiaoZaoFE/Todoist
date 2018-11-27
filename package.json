@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "precommit": "pretty-quick --staged",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "run-ios": "react-native run-ios",
     "run-android": "react-native run-android",
-    "precommit": "pretty-quick --staged",
+    "android-release": "cd android && ./gradlew assembleRelease",
+    "android-debug-manual-install": "cd android/app/build/outputs/apk && adb install app-debug.apk",
+    "android-release-manual-install": "cd android/app/build/outputs/apk/release && adb install app-release.apk",
     "test": "jest"
   },
   "dependencies": {
@@ -20,8 +23,10 @@
     "react-native": "0.57.5",
     "react-native-gesture-handler": "^1.0.9",
     "react-native-scrollable-tab-view": "^0.10.0",
+    "react-native-smartrefreshlayout": "^0.6.3",
     "react-native-vector-icons": "^6.1.0",
     "react-native-webp-support": "TGPSKI/react-native-webp-support",
+    "react-native-webview": "^2.13.0",
     "react-navigation": "^3.0.0",
     "react-redux": "^5.1.1"
   },
