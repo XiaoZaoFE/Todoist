@@ -5,19 +5,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { ScrollableTabView } from '../../components';
-import RefreshControl from './RefreshControl';
-
 export default class ScrollableTabScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
-
-  _onRefresh = () => {
-    setTimeout(() => {
-      this._hw && this._hw.finishRefresh();
-    }, 2000);
-  };
 
   render() {
     return (
@@ -25,9 +17,6 @@ export default class ScrollableTabScreen extends Component {
         <ScrollableTabView
           renderTabBar={() => <ScrollableTabView.ScrollableTabBar />}
           collapsableBar={<View style={{ height: 100, backgroundColor: 'red' }} />}
-          refreshControl={
-            <RefreshControl ref={ref => (this._hw = ref)} onRefresh={this._onRefresh} />
-          }
         >
           <View tabLabel={'React'} style={{ height: 1000 }} />
           <View tabLabel={'React1'} style={{ height: 500 }} />
